@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Restaurant.Models.Menu.TypeMenu>
+
+@{
+    ViewData["Title"] = "Menu";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="admin-menu">
+    <tr>
+        <th>Id</th>
+        <th>Название</th>
+        <th>Категория</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td><a asp-action="EditType" asp-route-id="@item.Id">Edit</a></td>
+        </tr>
+    }
+</table>
+
+
+

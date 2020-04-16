@@ -1,0 +1,27 @@
+﻿@*@model IEnumerable<Restaurant.Models.Menu.CategoryMenu>;*@
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+    <div class="container_menu">
+        @foreach (var category in ViewBag.Categories)
+        {
+            <h2 class="menu_h2">@category.Name</h2>
+            <img src="~/images/vensel.png" alt="" class="about_vensel">
+            <ul class=menu_ul>
+                @foreach (var menu in category.Menu)
+                {
+
+                    <li class="menu_li">
+                        <div>
+                            <span class="menu_title">@menu.Name</span>
+                            <span class="menu_price">@menu.Price р.</span>
+                            <span class="menu_weight">@menu.Count @menu.Unit</span>
+                        </div>
+                        <span class="menu_description">@menu.Description</span>
+                    </li>
+
+                }
+            </ul>
+        }
+    </div>

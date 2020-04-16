@@ -1,0 +1,14 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<aside class="menu_aside">
+    <ul>
+        @foreach (var type in ViewBag.Types)
+        {
+        <li>
+            <a asp-area="" asp-controller="Menu" asp-action="GetCategories" asp-route-Type="@type.Id">@type.Name</a>
+        </li>
+        }
+    </ul>
+</aside>

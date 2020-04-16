@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SkyLounge</title>
+    <link rel="stylesheet" href="~/css/site.css"/>
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <ul>
+                <li><a asp-area="" asp-controller="Main" asp-action="Index">Главная</a></li>
+                <li><a asp-area="" asp-controller="Menu" asp-action="Index">Меню</a></li>
+                <li><a asp-area="" asp-controller="Events" asp-action="Index">Мероприятия</a></li>
+                <li><a asp-area="" asp-controller="News" asp-action="Index">Новости</a></li>
+                <li><a asp-area="" asp-controller="Gallery" asp-action="Index">Галерея</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Index">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    @RenderBody()
+
+    @await Html.PartialAsync("_Footer")
+
+</body>
+</html>
