@@ -9,7 +9,7 @@ for details on configuring this project to bundle and minify static web assets. 
 header {
     display: inline-flex;
     background-color: #45322e;
-    width:100%;
+    width: 100%;
     height: 3.75vw;
 }
 
@@ -40,6 +40,22 @@ body {
     max-width: 1920px;
     font-family: Monsterrat;
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5vw;
+}
+
+input {
+    font-size: 1.5vw;
+}
+
+select{
+    font-size: 1.5vw;
+}
+
+button{
+    font-size:1.5vw;
 }
 
 h1 {
@@ -60,6 +76,7 @@ li {
 span {
     font-size: 1.5vw;
 }
+
 
 .vensel_white {
     background: url(../images/vensel_white.png);
@@ -89,6 +106,7 @@ span {
 
 
 section {
+    width:100%;
     height: 100vh;
 }
 
@@ -268,8 +286,6 @@ footer {
     padding: 2.5vw 3.125vw 2.5vw 3.125vw;
     color: white;
     margin-top: auto;
-    position: absolute;
-    bottom: 0;
 }
 
     footer .footer_container {
@@ -291,27 +307,23 @@ footer {
         background-size: contain;
     }
 
-    footer .footer_description {
-        font-size: 1.375vw;
+    footer .footer_description ul {
+        padding: 0;
+        margin: 0;
     }
 
-        footer .footer_description ul {
-            padding: 0;
-            margin: 0;
-        }
 
+.offer .offer_img {
+    height: 100vh;
+    grid-row: 1/-1;
+}
 
-    .offer .offer_img {
-        height: 100vh;
-        grid-row: 1/-1;
-    }
-
-    .offer .offer_container {
-        margin-top: 1.25vw;
-        align-self: flex-start;
-        display: grid;
-        place-items: center;
-    }
+.offer .offer_container {
+    margin-top: 1.25vw;
+    align-self: flex-start;
+    display: grid;
+    place-items: center;
+}
 
 
 .menu {
@@ -326,14 +338,14 @@ footer {
     background: red;
 }
 
-.menu_aside{
-    text-align:left;
+.menu_aside {
+    text-align: left;
 }
 
     .menu_aside a {
         font-size: 2.5vw;
         color: #cc9900;
-        text-decoration:none;
+        text-decoration: none;
     }
 
 .menu_container {
@@ -374,7 +386,114 @@ footer {
     }
 
 .admin-menu {
-    border: none;
-    width: 100%;
+    width: 80%;
     text-align: center;
+    align-self: center;
+    border-spacing: 30px 2px;
+}
+
+    .admin-menu p {
+        margin-left: 1em;
+    }
+
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.text-danger {
+    color: red;
+}
+
+.admin-edit {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    font-size: 1.5vw;
+}
+
+.editCategory {
+    margin: auto 2em;
+    margin-bottom:0;
+}
+
+form {
+    display: inline-grid;
+    width: 100%;
+}
+
+    form div {
+        display: inline-grid;
+    }
+
+.edit {
+    width: 20px;
+    height: 20px;
+    background: url(../images/pen.ico);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.editGroup {
+    grid-template-columns: 1fr 2fr;
+    display: grid;
+    grid-column-gap: 2em;
+    margin: 0 4vw;
+}
+
+.form_a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.delete {
+    width: 20px;
+    height: 20px;
+    background: url(../images/trash.ico);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.admin_h2 {
+    text-align: center;
+}
+
+.admin_container {
+    width: 60%;
+    justify-self: center;
+}
+
+.form-group {
+    margin-bottom: 2%;
+}
+
+.content {
+    height: max-content;
+}
+
+.delete_container {
+    display: grid;
+    align-self: center;
+    justify-items: center;
 }

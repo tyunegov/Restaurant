@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<table class="admin-menu">
+    <tr>
+        <th>Название</th>
+        <th>Описание</th>
+        <th>Цена</th>
+        <th>Количество</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var item in ViewBag.Menu)
+    {
+<tr>
+    <td>@item.Name</td>
+    <td>@item.Description</td>
+    <td>@item.Price</td>
+    <td>@item.Count @item.Unit</td>
+    <td class="edit"><a asp-action="EditMenu" asp-route-id="@item.Id" class="form_a"></a></td>
+    <td class="delete"><a asp-action="DeleteMenu" asp-route-id="@item.Id" methos="post" class="form_a"></a></td>
+</tr>
+    }
+</table>
+

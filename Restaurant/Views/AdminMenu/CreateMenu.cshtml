@@ -1,0 +1,39 @@
+﻿@model Restaurant.Models.Menu.Menu
+@{
+    ViewData["Title"] = "CreateMenu";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+    <form asp-action="CreateMenu" asp-controller="AdminMenu" asp-antiforgery="true" method="post" class="admin-menu">
+        <div>
+            <label asp-for="Name"></label>
+            <input asp-for="Name" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div>
+            <label asp-for="Description"></label>
+            <input asp-for="Description" />
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div>
+            <label asp-for="Price"></label>
+            <input asp-for="Price" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+        <div>
+            <label asp-for="Count"></label>
+            <input asp-for="Count" />
+            <span asp-validation-for="Count" class="text-danger"></span>
+        </div>
+        <div>
+            <label asp-for="Unit"></label>
+            <input asp-for="Unit" />
+            <span asp-validation-for="Unit" class="text-danger"></span>
+        </div>
+        <div>
+            <label asp-for="Category"></label>
+            <input asp-for="CategoryId" type="hidden" value="@ViewBag.Category.Id"/>
+            <input asp-for="Category" type="text" disabled value="@ViewBag.Category.Name"/>
+        </div>
+        <input type="submit" value="Отправить" name="action" />
+        <button name="action" value="cancel">Отмена</button>
+    </form>

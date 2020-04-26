@@ -20,10 +20,9 @@ namespace Restaurant.Models.Menu
         [Display(Name = "Количество")]
         public double Count { get; set; }
         [Display(Name = "Единицы измерения")]
-        public string Unit { get{ return "гр."; } }
+        public string Unit { get; set; }
         public int CategoryId { get; set; }
         [Display(Name = "Категория")]
-        [UIHint("Collection")]
         public CategoryMenu Category { get; set; }
     }
 }

@@ -1,0 +1,15 @@
+﻿@model Restaurant.Models.Menu.TypeMenu
+@{
+    ViewData["Title"] = "DeleteType";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+    <div class="admin_container">
+        <h2>@Model.Name</h2>
+        @Html.DisplayFor(model => model.Name)
+        @using (Html.BeginForm("DeleteType", "AdminMenu", FormMethod.Post))
+        {
+            <button name="action" value="delete" asp-route-id="@Model.Id">Удалить</button>
+            <button name="action" value="cancel">Отмена</button>
+        }
+    </div>

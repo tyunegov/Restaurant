@@ -1,0 +1,17 @@
+﻿@model Restaurant.Models.Menu.CategoryMenu
+@{
+    ViewData["Title"] = "EditCategories";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<div class="editGroup">
+    <div>
+        @await Html.PartialAsync("_EditCategory")
+    </div>
+    <div>
+        <p>
+            <a asp-action="CreateMenu" asp-route-categoryId="@Model.Id">Create New</a>
+        </p>
+        @await Html.PartialAsync("_Menu")
+    </div>
+</div>

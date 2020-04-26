@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Тюнеговы\\Desktop\\rest\\Restaurant\\Restaurant\\Restaurant.csproj": {}
+    "C:\\Users\\Тюнеговы\\Desktop\\Restaurant\\Restaurant\\Restaurant.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Тюнеговы\\Desktop\\rest\\Restaurant\\Restaurant\\Restaurant.csproj": {
+    "C:\\Users\\Тюнеговы\\Desktop\\Restaurant\\Restaurant\\Restaurant.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Тюнеговы\\Desktop\\rest\\Restaurant\\Restaurant\\Restaurant.csproj",
+        "projectUniqueName": "C:\\Users\\Тюнеговы\\Desktop\\Restaurant\\Restaurant\\Restaurant.csproj",
         "projectName": "Restaurant",
-        "projectPath": "C:\\Users\\Тюнеговы\\Desktop\\rest\\Restaurant\\Restaurant\\Restaurant.csproj",
+        "projectPath": "C:\\Users\\Тюнеговы\\Desktop\\Restaurant\\Restaurant\\Restaurant.csproj",
         "packagesPath": "C:\\Users\\Тюнеговы\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Тюнеговы\\Desktop\\rest\\Restaurant\\Restaurant\\obj\\",
+        "outputPath": "C:\\Users\\Тюнеговы\\Desktop\\Restaurant\\Restaurant\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

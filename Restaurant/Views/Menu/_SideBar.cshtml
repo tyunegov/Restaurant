@@ -7,7 +7,7 @@
         @foreach (var type in ViewBag.Types)
         {
         <li>
-            <a asp-area="" asp-controller="Menu" asp-action="GetCategories" asp-route-Type="@type.Id">@type.Name</a>
+            <a asp-area="" asp-controller="Menu" asp-action="Index" asp-route-Type="@type.Id">@type.Name</a>
         </li>
         }
     </ul>

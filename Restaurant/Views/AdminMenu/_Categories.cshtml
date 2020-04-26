@@ -1,0 +1,17 @@
+﻿<table class="admin-menu">
+    <tr>
+        <th>Название</th>
+        <th>Категория</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var item in ViewBag.Categories)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Type.Name</td>
+            <td class="edit"><a asp-action="EditCategory" asp-route-id="@item.Id" class="form_a"></a></td>
+            <td class="delete"><a asp-action="DeleteCategory" asp-route-id="@item.Id" method="post" class="form_a"></a></td>
+        </tr>
+    }
+</table>

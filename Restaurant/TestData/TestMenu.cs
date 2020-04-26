@@ -1,4 +1,5 @@
-﻿using Restaurant.Models.Menu;
+﻿using Microsoft.AspNetCore.Mvc;
+using Restaurant.Models.Menu;
 using Restaurant.ModelView;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,8 @@ namespace Restaurant.TestData
 {
     public class TestMenu : IRepositoryMenu
     {
+        public string TestMenuStatus { get; set; }
+
         IEnumerable<TypeMenu> types = new List<TypeMenu>()
         {
             new TypeMenu(){ Id=1, Name="Type1"},
@@ -48,16 +51,64 @@ namespace Restaurant.TestData
         public IEnumerable<TypeMenu> Types { get { return types; } set { throw new NotImplementedException(); } }
         public IEnumerable<Menu> Menu { get { return menu; } set { throw new NotImplementedException(); } }
 
-        public IEnumerable<CategoryMenu> GetCategoriesFortypeId(int typeId)
+        public void EditCategory(int id, CategoryMenu category)
         {
-            foreach(var v in categories)
-            {
-                v.Menu = menu.Where(x=>x.CategoryId==v.Id);
-            }
-            return categories;
+            TestMenuStatus = "EdisCategory";
         }
 
-        public IEnumerable<Menu> GetMenuForCategoryId(int? categoryId)
+        public void EditType(int id, TypeMenu type)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<CategoryMenu> GetCategoriesFortypeId(int typeId)
+        {
+            var _categories = categories.Where(x=>x.TypeId==typeId);
+            foreach(var v in _categories)
+            {
+                v.Menu = menu.Where(x=>x.CategoryId==v.Id);
+                v.Type = types.Where(x => x.Id == typeId).FirstOrDefault();
+            }
+            return _categories;
+        }
+
+        public IEnumerable<Menu> GetMenuForCategoryId(int categoryId)
+        {
+            return menu.Where(x=>x.CategoryId==categoryId);
+        }
+
+        public CategoryMenu GetCategory(int id)
+        {
+            return Categories.Where(x=>x.Id==id).FirstOrDefault();
+        }
+
+        public Menu GetMenu(int id)
+        {
+            return menu.Where(x => x.Id == id).FirstOrDefault();
+        }
+
+        public void EditMenu(int id, Menu menu)
+        {
+            throw new NotImplementedException();
+        }
+
+        public TypeMenu GetTypeMenu(int id)
+        {
+            var _types = types.Where(x => x.Id == id).FirstOrDefault();            
+            return _types;
+        }
+
+        public void CreateType(TypeMenu type)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CreateMenu(Menu menu)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CreateCategory(CategoryMenu category)
         {
             throw new NotImplementedException();
         }

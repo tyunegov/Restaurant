@@ -15,9 +15,9 @@ namespace Restaurant.Models.Menu
         public string Name { get; set; }
         public int TypeId { get; set; }
         [Display(Name = "Категория")]
+        [UIHint("Collection")]
         public IEnumerable<Menu> Menu { get; set; }
         [Display(Name = "Раздел")]
-        [UIHint("Collection")]
         public TypeMenu Type { get; set; }
     }
 }

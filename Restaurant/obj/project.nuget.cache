@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3SOGsqIKpLSOwlbaFMl0b/nVzYGjFN8OeC73wmq1Exo9NVZo5Vc1V3LsvAcsWE3oxlnZGLMM4mYr+Jp2MMVr/w==",
+  "dgSpecHash": "WDS2a02dK6CTBzK46B2BObqrEa+c4s1g3CEbAa/ot7aTW6Ril0k0mLUyBTzmMkBp9qdu4QaSROu1rJ3W6sfpvA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Тюнеговы\\Desktop\\rest\\Restaurant\\Restaurant\\Restaurant.csproj",
+  "projectFilePath": "C:\\Users\\Тюнеговы\\Desktop\\Restaurant\\Restaurant\\Restaurant.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Тюнеговы\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Тюнеговы\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

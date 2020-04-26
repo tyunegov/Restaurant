@@ -1,0 +1,21 @@
+﻿@model Restaurant.Models.Menu.CategoryMenu
+
+@{
+    ViewData["Title"] = "CreateCategory";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<form asp-action="CreateCategory" asp-controller="AdminMenu" asp-antiforgery="true" method="post" class="admin-menu">
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Type"></label>
+        <input asp-for="TypeId" type="hidden" value="@ViewBag.Type.Id"/>
+        <input asp-for="Type" type="text" disabled value="@ViewBag.Type.Name" />
+    </div>
+    <input type="submit" value="Отправить" name="action" />
+    <button name="action" value="cancel">Отмена</button>
+</form>

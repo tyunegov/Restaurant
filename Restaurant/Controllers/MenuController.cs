@@ -21,12 +21,12 @@ namespace Restaurant.Controllers
         }
         public ActionResult Index(int Type = 1)
         {
-            GetCategories();
+            GetCategories(Type);
             GetTypes();
             return View();
         }
 
-        public ActionResult GetCategories(int TypeId = 1)
+        public ActionResult GetCategories(int TypeId)
         {
             IEnumerable<CategoryMenu> categories = repository.GetCategoriesFortypeId(TypeId);
 
@@ -37,7 +37,7 @@ namespace Restaurant.Controllers
         public ActionResult GetMenu(int? CategoryId)
         {
             if (CategoryId == null) return View(repository.Menu);
-            return View(repository.GetMenuForCategoryId(CategoryId));
+            return View(repository.GetMenuForCategoryId(CategoryId.Value));
         }
 
         public ActionResult GetTypes()

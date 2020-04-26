@@ -25,12 +25,14 @@ namespace Restaurant
             services.AddControllersWithViews();
             services.AddTransient<IRepositoryMenu, TestMenu>();
             services.AddTransient<IRepositoryUser, TestUser>();
+            services.AddTransient<IRepositoryBooking, TestBooking>();
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-            .AddCookie(options => //CookieAuthenticationOptions
+            .AddCookie(options =>
             {
                 options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
             });
+
 
             services.AddDbContext<ApplicationContext>(options =>
                              options.UseSqlServer(Configuration.GetConnectionString("ApplicationContext")));
