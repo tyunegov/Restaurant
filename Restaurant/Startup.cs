@@ -25,6 +25,7 @@ namespace Restaurant
             services.AddControllersWithViews();
             services.AddTransient<IRepositoryMenu, TestMenu>();
             services.AddTransient<IRepositoryUser, TestUser>();
+            services.AddTransient<IRepositoryNews, TestNews>();
             services.AddTransient<IRepositoryBooking, TestBooking>();
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

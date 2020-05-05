@@ -11,6 +11,8 @@ header {
     background-color: #45322e;
     width: 100%;
     height: 3.75vw;
+    position:fixed;
+    z-index:1;
 }
 
 .navigation {
@@ -111,6 +113,7 @@ section {
 }
 
 .preview {
+    margin-top: 3.75vw;
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
@@ -131,6 +134,10 @@ section {
 
     .preview .preview_buttolLeft {
         margin-left: 1.875vw;
+    }
+
+    .preview_containerButton{
+        display: none;
     }
 
 .about {
@@ -329,14 +336,50 @@ footer {
 .menu {
     align-self: flex-start;
     text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 5fr;
     height: auto;
 }
 
-.menu_aside {
-    background: red;
+.menu_top {
+    margin-top: 3.75vw;
+    width: 100%;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
+
+    .menu_top ul {
+        display: inline-flex;
+        margin: 0 auto;
+        height:1.5em;
+        margin-left: 7.5vw;
+        padding: 0;
+    }
+
+    .menu_top li:first{
+        margin-left: 0;
+    }
+
+    .menu_top li{
+        margin-left: 1em;
+    }
+
+    .menu_top li:hover {
+        border-bottom: 4px #cc9900 solid;
+    }
+
+    .menu_top a:hover {
+        color: #cc9900;
+    }
+
+    .menu_top a {
+        text-decoration: none;
+        color: #45322e;
+        font-weight: bold;
+        font-size: 1.125vw;
+    }
+
+        .menu_aside {
+            background: red;
+        }
 
 .menu_aside {
     text-align: left;
@@ -351,6 +394,7 @@ footer {
 .menu_container {
     margin-top: 1.25vw;
     margin-bottom: 3vw;
+    margin-bottom: 1em;
 }
 
 .menu .menu_ul {
@@ -390,6 +434,10 @@ footer {
     text-align: center;
     align-self: center;
     border-spacing: 30px 2px;
+}
+
+.editGroup .admin-menu{
+    width: auto;
 }
 
     .admin-menu p {
@@ -451,14 +499,14 @@ form {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    align-self: center;
 }
 
 .editGroup {
     grid-template-columns: 1fr 2fr;
     display: grid;
     grid-column-gap: 2em;
-    margin: 0 4vw;
-}
+    margin: 3.75vw 4vw auto 4vw;}
 
 .form_a {
     width: 100%;
@@ -473,6 +521,7 @@ form {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    align-self: center;
 }
 
 .admin_h2 {
@@ -482,6 +531,13 @@ form {
 .admin_container {
     width: 60%;
     justify-self: center;
+    margin-top: 3.75vw;
+    display: inline-grid;
+    align-self: center;
+}
+
+.admin_container img{
+
 }
 
 .form-group {
@@ -496,4 +552,48 @@ form {
     display: grid;
     align-self: center;
     justify-items: center;
+}
+
+.account {
+    width: 60%;
+    align-self: center;
+}
+
+.container_news {
+    display: grid;
+    justify-items: center;
+    margin-top: 3.75vw;
+}
+
+.news {
+    margin: 1em auto;
+    width: 60%;
+    display: grid;
+    place-items: center;
+    border-bottom: groove;
+}
+
+    .image_news {
+        width: 60vw;
+    }
+
+    .news p{
+        margin-bottom:0;
+        justify-self: left;
+    }
+
+.container_description{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 15fr 1fr 1fr;
+}
+
+textarea{
+    font-size: 1.5vw;
+}
+
+.edit_container{
+    margin-top: 3.75vw;
+    width: 80%;
+    align-self: center;
 }

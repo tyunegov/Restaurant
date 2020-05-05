@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Restaurant.Models.News.NewsModel>
+@{
+    ViewData["Title"] = "Index";
+}
+    <div class="container_news">
+        @foreach (var item in Model)
+        {
+            <div class="news">
+                @Html.DisplayFor(modelItem => item.Description)
+                @Html.Raw("<img class=\"image_news\"' src=\"data:image/jpeg;base64,"
+                                    + Convert.ToBase64String(item.Image) + "\" />")
+                <p>SkyLounge +7 (347) 285-01-40</p>
+            </div>
+        }
+    </div>

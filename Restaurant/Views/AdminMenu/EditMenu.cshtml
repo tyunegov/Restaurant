@@ -3,39 +3,41 @@
     ViewData["Title"] = "EditMenu";
     Layout = "~/Views/Shared/_Admin.cshtml";
 }
-<h2 class="edit_h2">@Model.Name</h2>
-<form asp-action="EditMenu" asp-controller="AdminMenu" asp-antiforgery="true" method="post">
-    <input type="hidden" asp-for="Id" />
-    <div>
-        <label asp-for="Name"></label>
-        <input asp-for="Name" />
-        <span asp-validation-for="Name" class="text-danger"></span>
+    <div class="edit_container">
+        <h2 class="edit_h2">@Model.Name</h2>
+        <form asp-action="EditMenu" asp-controller="AdminMenu" asp-antiforgery="true" method="post">
+            <input type="hidden" asp-for="Id" />
+            <div>
+                <label asp-for="Name"></label>
+                <input asp-for="Name" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="Description"></label>
+                <input asp-for="Description" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="Price"></label>
+                <input asp-for="Price" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="Count"></label>
+                <input asp-for="Count" />
+                <span asp-validation-for="Count" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="Unit"></label>
+                <input asp-for="Unit" />
+                <span asp-validation-for="Unit" class="text-danger"></span>
+            </div>
+            <p>Категория:</p>
+            @Html.DropDownListFor(model => model.CategoryId, ViewBag.Categories as SelectList)
+            <input type="submit" value="Сохранить" />
+        </form>
+        <form asp-action="DeleteMenu" method="get">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Удалить" />
+        </form>
     </div>
-    <div>
-        <label asp-for="Description"></label>
-        <input asp-for="Description" />
-        <span asp-validation-for="Description" class="text-danger"></span>
-    </div>
-    <div>
-        <label asp-for="Price"></label>
-        <input asp-for="Price" />
-        <span asp-validation-for="Price" class="text-danger"></span>
-    </div>
-    <div>
-        <label asp-for="Count"></label>
-        <input asp-for="Count" />
-        <span asp-validation-for="Count" class="text-danger"></span>
-    </div>
-    <div>
-        <label asp-for="Unit"></label>
-        <input asp-for="Unit" />
-        <span asp-validation-for="Unit" class="text-danger"></span>
-    </div>
-    <p>Категория:</p>
-    @Html.DropDownListFor(model => model.CategoryId, ViewBag.Categories as SelectList)
-    <input type="submit" value="Сохранить" />
-</form>
-<form asp-action="DeleteMenu" method="get">
-    <input type="hidden" asp-for="Id" />
-    <input type="submit" value="Удалить" />
-</form>   

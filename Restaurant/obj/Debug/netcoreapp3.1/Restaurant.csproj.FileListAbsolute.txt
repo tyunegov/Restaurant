@@ -518,3 +518,7 @@ C:\Users\Тюнеговы\Desktop\Restaurant\Restaurant\obj\Debug\netcoreapp3.1\
 C:\Users\Тюнеговы\Desktop\Restaurant\Restaurant\obj\Debug\netcoreapp3.1\Razor\Views\AdminMenu\CreateMenu.cshtml.g.cs
 C:\Users\Тюнеговы\Desktop\Restaurant\Restaurant\obj\Debug\netcoreapp3.1\Razor\Views\AdminMenu\CreateType.cshtml.g.cs
 C:\Users\Тюнеговы\Desktop\Restaurant\Restaurant\obj\Debug\netcoreapp3.1\Razor\Views\AdminMenu\CreateCategory.cshtml.g.cs
+C:\Users\Тюнеговы\Desktop\Restaurant\Restaurant\obj\Debug\netcoreapp3.1\Razor\Views\News\Index.cshtml.g.cs
+C:\Users\Тюнеговы\Desktop\Restaurant\Restaurant\obj\Debug\netcoreapp3.1\Razor\Views\AdminNews\Delete.cshtml.g.cs
+C:\Users\Тюнеговы\Desktop\Restaurant\Restaurant\obj\Debug\netcoreapp3.1\Razor\Views\AdminNews\Edit.cshtml.g.cs
+C:\Users\Тюнеговы\Desktop\Restaurant\Restaurant\obj\Debug\netcoreapp3.1\Razor\Views\AdminNews\Index.cshtml.g.cs
